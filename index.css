@@ -26,13 +26,34 @@ header p {
 }
 
 header img {
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%);
     width: 10rem;
     height: auto;
     border-radius: 50%;
+    margin-top: 1rem; /* Añadimos un margen superior para separarlo un poco */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Si el header tiene muchos elementos, en móviles se apilan */
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    header img {
+        width: 6rem; /* Ajustamos el tamaño de la imagen en dispositivos pequeños */
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .categoria {
@@ -148,7 +169,6 @@ p {
     font-weight: bold;
     color: white;
 }
-
 
 @media (max-width: 768px) {
     li {
