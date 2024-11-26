@@ -10,7 +10,9 @@ header {
     background-color: orange;
     text-align: center;
     padding: 2rem 1rem;
-    position: relative;
+    display: flex;
+    flex-direction: column; /* Los elementos se organizan en columna */
+    align-items: center; /* Centra los elementos */
 }
 
 header h1 {
@@ -29,30 +31,26 @@ header img {
     width: 10rem;
     height: auto;
     border-radius: 50%;
-    margin-top: 1rem; /* Añadimos un margen superior para separarlo un poco */
-    display: block;
+    margin-top: 1rem;
+    display: block; /* Asegura que la imagen no se apile con otros elementos */
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Si el header tiene muchos elementos, en móviles se apilan */
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-    header {
-        text-align: center;
-    }
-
     header h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Reducir tamaño del título */
     }
 
     header p {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Reducir tamaño del párrafo */
     }
 
     header img {
-        width: 6rem; /* Ajustamos el tamaño de la imagen en dispositivos pequeños */
+        width: 6rem; /* Reducir tamaño de la imagen */
         margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem; /* Asegurar que haya espacio debajo de la imagen */
     }
 }
 
@@ -77,13 +75,13 @@ ul {
 
 li {
     display: flex;
-    align-items: center; 
+    align-items: center;
     background-color: black;
     border: 1px solid orange;
     border-radius: 0.5rem;
     margin: 1rem;
     padding: 1rem;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 li img {
@@ -96,7 +94,7 @@ li img {
 }
 
 li .info {
-    flex-grow: 1; 
+    flex-grow: 1;
     text-align: left;
     margin-right: 1rem;
 }
@@ -172,24 +170,24 @@ p {
 
 @media (max-width: 768px) {
     li {
-        flex-direction: column; 
-        text-align: center; 
+        flex-direction: column;
+        text-align: center;
     }
 
     li img {
-        margin-bottom: 1rem; 
+        margin-bottom: 1rem;
     }
 
     .precio {
-        margin-top: 1rem; 
+        margin-top: 1rem;
     }
 
     .pagos ul {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
     }
 
     .pagos li {
-        width: 80%; 
+        width: 80%;
     }
 }
