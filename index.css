@@ -1,0 +1,193 @@
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: orange;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+header img {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    width: 10rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.categoria{
+    text-align: center;
+}
+h2 {
+    background-color: orange;
+    color: white;
+    padding: 1rem;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+ 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    border: 1px solid orange;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+li img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border: 0.3rem solid orange;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+li .info {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+ p {
+    font-size: 1.2rem; 
+    font-weight: 500; 
+    color: white; 
+    margin: 0.5rem 0;
+}
+
+
+.precio {
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    color: red; 
+    text-align: right;
+    border: 0.2rem solid white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+
+.titulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Estilo para la sección de formas de pago */
+.pagos {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.pagos h2 {
+    background-color: orange;
+    color: white;
+    padding: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Contenedor para organizar las formas de pago */
+.pagos ul {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 2rem; /* Espacio entre los elementos */
+    padding: 0;
+    list-style: none;
+}
+
+.pagos li {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    background-color: black;
+    border: 1px solid orange;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 12rem; /* Ancho fijo para cada forma de pago */
+}
+
+.pagos li img {
+    width: 6rem; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.pagos li .titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+
+
+@media (min-width: 768px) {
+    li {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    li img {
+        margin: 0;
+    }
+
+    li .info {
+        text-align: left;
+        flex-grow: 1;
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 3rem 1rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    li img {
+        width: 14rem;
+        height: 14rem;
+    }
+}
